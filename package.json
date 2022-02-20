@@ -1,0 +1,33 @@
+{
+  "name": "pronote-scraper",
+  "version": "1.0.0",
+  "description": "A NodeJS/Puppeteer Program able to scrape the Pronote Website (Reverse engineering).",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pronote-Extra/pronote-scraper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pronote-Extra/pronote-scraper/issues"
+  },
+  "homepage": "https://github.com/Pronote-Extra/pronote-scraper#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-basic-auth": "^1.2.1",
+    "puppeteer": "^13.3.2",
+    "puppeteer-extra": "^3.2.3",
+    "puppeteer-extra-plugin-anonymize-ua": "^2.3.3",
+    "puppeteer-extra-plugin-stealth": "^2.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
