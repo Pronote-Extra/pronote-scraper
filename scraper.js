@@ -8,6 +8,7 @@ puppeteer.use(require('puppeteer-extra-plugin-anonymize-ua')());
 let data = [];
 
 const scraper = async () => {
+    let data = [];
     console.log('SCRAPER: Process started...');
 
     const browser = await puppeteer.launch({
