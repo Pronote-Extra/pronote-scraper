@@ -13,21 +13,21 @@ app.use(urlencoded({
     extended: true
 }));
 
-// const username = process.env.USERNAME;
-// const password = process.env.PASSWORD;
+const username = process.env.USERNAME;
+const password = process.env.PASSWORD;
 
-// app.use(basicAuth({
-//     users: { [username]: password },
-//     unauthorizedResponse: getUnauthorizedResponse
-// }))
+app.use(basicAuth({
+    users: { [username]: password },
+    unauthorizedResponse: getUnauthorizedResponse
+}))
 
-// function getUnauthorizedResponse(req) {
-//     return req.auth
-//         ? ('Credentials ' + req.auth.user + ':' + req.auth.password + ' rejected')
-//         : 'No credentials provided'
-// };
+function getUnauthorizedResponse(req) {
+    return req.auth
+        ? ('Credentials ' + req.auth.user + ':' + req.auth.password + ' rejected')
+        : 'No credentials provided'
+};
 
-app.get('/api/pronote', async(req, res) => {
+app.post('/api/pronote', async(req, res) => {
     console.log('SERVER: POST request sent')
     const response = await scraper();
     res.status(200).json(response);
